@@ -1,0 +1,8 @@
+from scratch.linear_algebra import Vector, dot
+
+def step_function(x: float) -> float:
+    return 1.0 if x >= 0 else 0.0
+
+def perceptron_function(weights: Vector, bias: float, x: Vector) -> float:
+    calculation = dot(weights, x) + bias
+    return step_function(calculation)
